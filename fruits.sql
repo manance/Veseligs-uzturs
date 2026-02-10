@@ -1,0 +1,7 @@
+CREATE DATABASE fruits;
+USE fruits;
+
+CREATE TABLE fruits (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    `name` VARCHAR(40) NOT NULL
+)
