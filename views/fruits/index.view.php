@@ -4,12 +4,12 @@
     <input name='search_query' value="<?= $_GET['search_query'] ?? "" ?>" />
     <button>Meklēt</button>
 </form>
-<?php if (count($fruit) == 0) { ?>
-    <p>❌ Nav atrasts neviens ieraksts. 😭 Lūdzu, pamēģini citu vārdu vai frāzi 🐣</p>
+<?php if (count($fruits) == 0) { ?>
+    <p>❌ Nav atrasts neviens ieraksts! ❌</p>
 <?php } else { ?>
     <ul>
         <?php foreach ($fruits as $fruit) { ?>
-            <li><a href="show?id=<?= $fruit['id'] ?>"><?= htmlspecialchars($fruit['content']) ?></a></li>
+            <li><a href="/show?id=<?= $fruit['id'] ?>"><?= htmlspecialchars($fruit['name']) ?></a></li>
         <?php } ?>
     </ul>
 <?php } ?>
