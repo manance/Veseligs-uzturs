@@ -1,16 +1,12 @@
 <?php ob_start() ?>
 
-<div class="container">
-    <div class="container_content">
-        <h1><?= htmlspecialchars($fruit['name']) ?></h1>
+<h1><?= htmlspecialchars($fruit['name']) ?></h1>
 
-        <a class="edit" href="/edit?id=<?= $fruit['id'] ?>">Rediģē</a>
+<a href="/edit?id=<?= $fruit['id'] ?>">Rediģēt</a>
 
-        <form class="delete_form" action="/delete" method="POST">
-            <button class="delete" name="id" value="<?= $fruit['id'] ?>">DELETE</button>
-        </form>
-    </div>
-</div>
+<form action="/delete" method="POST">
+    <button name="id" value="<?= $fruit['id'] ?>">Dzēst</button>
+</form>
 
 <?php $content = ob_get_clean() ?>
 <?php require "./views/components/layout.php"; ?>

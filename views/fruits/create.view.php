@@ -1,8 +1,8 @@
 <?php ob_start() ?>
 
-<h1>Izveido jaunu emuāra ierakstu</h1>
+<h1>Pievieno augli!</h1>
 <form method="POST">
-    <label>Emuāra nosaukums: <input name="fruit" value="<?= $_POST['fruit'] ?? '' ?>"></label>
+    <label>Auglis: <input name="fruit" value="<?= $_POST['fruit'] ?? '' ?>"></label>
     <button>Iesniegt</button>
     <?php if (isset($errors['fruits'])) { ?>
         <p><?= $errors['fruits']; ?></p>
